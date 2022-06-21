@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { COLOR_WHITE, COLOR_TRANSPARENT_DARK } from "../../tools/constant";
+import { COLOR_WHITE, COLOR_TRANSPARENT_DARK, FONT_NUNITO_BOLD } from "../../tools/constant";
 import { getScreenDimension, ios } from "../../tools/helper";
 const { height, width } = getScreenDimension();
 
@@ -22,7 +22,7 @@ export default StyleSheet.create({
     },
     title: {
         fontSize: 28,
-        fontFamily: 'Nunito-Bold',
+        fontFamily: FONT_NUNITO_BOLD,
         color: COLOR_WHITE,
         marginTop: 91
     }

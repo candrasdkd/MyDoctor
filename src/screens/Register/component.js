@@ -1,32 +1,34 @@
 import React from 'react'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
-import { KeyboardAvoidingView, View } from 'react-native'
+import { View } from 'react-native'
 import { CustomTextInput, CustomButton, Gap, Header } from '../../components';
-import navigationService from '../../navigation-service';
 import { NAV_NAME_HOME, } from '../../tools/constant';
+import navigationService from '../../navigation-service';
+import LocalizedString from "../../tools/localization";
 import Styles from "./style";
 
 const RegisterScreen = () => {
     return (
         <KeyboardAwareScrollView style={Styles.page}>
             <Header
-                title={'Daftar Akun'}
+                title={LocalizedString.registerEmailScreen.title}
                 showIcon={true}
                 nameIcon={'backArrow'}
                 onPressed={() => navigationService.back()}
             />
             <View style={{ padding: 40, paddingTop: 0 }}>
-                {/* <StatusBar translucent backgroundColor="transparent" barStyle="dark-content" /> */}
-                <CustomTextInput label={'Full Nama'} />
+                <CustomTextInput label={LocalizedString.registerEmailScreen.labelFullName} />
                 <Gap height={24} />
-                <CustomTextInput label={'Pekerjaan'} />
+                <CustomTextInput label={LocalizedString.registerEmailScreen.labelJobTitle} />
                 <Gap height={24} />
-                <CustomTextInput label={'Email'} />
+                <CustomTextInput label={LocalizedString.registerEmailScreen.labelEmail} />
                 <Gap height={24} />
-                <CustomTextInput label={'Password'} />
+                <CustomTextInput label={LocalizedString.registerEmailScreen.labelPassword} />
+                <Gap height={24} />
+                <CustomTextInput label={LocalizedString.registerEmailScreen.labelConfirmPassword} />
                 <Gap height={40} />
                 <CustomButton
-                    title='Sign Up'
+                    title={LocalizedString.registerEmailScreen.buttonCaptionRegister}
                     onPressed={() => navigationService.reset({
                         index: 0,
                         routes: [{ name: NAV_NAME_HOME }],

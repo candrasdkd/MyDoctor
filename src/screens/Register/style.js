@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
-import { COLOR_WHITE, COLOR_BLACK, FONT_NUNITO_BOLD, FONT_NUNITO_EXTRA_BOLD } from "../../tools/constant";
-import { getScreenDimension, ios } from "../../tools/helper";
-const { height, width } = getScreenDimension();
+import { COLOR_WHITE, COLOR_BLACK, FONT_NUNITO_EXTRA_BOLD } from "../../tools/constant";
+import { getScreenDimension, } from "../../tools/helper";
+const { width } = getScreenDimension();
 
 export default StyleSheet.create({
     page: {

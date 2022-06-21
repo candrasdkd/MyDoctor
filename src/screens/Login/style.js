@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
-import { COLOR_WHITE, COLOR_BLACK } from "../../tools/constant";
-import { getScreenDimension, ios } from "../../tools/helper";
-const { height, width } = getScreenDimension();
+import { COLOR_WHITE, COLOR_BLACK, FONT_NUNITO_BOLD } from "../../tools/constant";
+import { getScreenDimension } from "../../tools/helper";
+const { width } = getScreenDimension();
 
 export default StyleSheet.create({
     page: {
@@ -13,8 +13,8 @@ export default StyleSheet.create({
         height: width / 3.5,
     },
     title: {
-        fontSize: 20,
-        fontFamily: 'Nunito-Bold',
+        fontSize: 24,
+        fontFamily: FONT_NUNITO_BOLD,
         color: COLOR_BLACK,
         marginVertical: 40,
         maxWidth: width - 150,

@@ -1,9 +1,10 @@
 import React from 'react'
 import { View, Text, ImageBackground, Image, StatusBar, } from 'react-native'
 import { IlLogo, IlGetStarted, } from "../../assets";
-import { CustomButton } from '../../components';
-import navigationService from '../../navigation-service';
+import { CustomButton, Gap } from '../../components';
 import { NAV_NAME_LOGIN, NAV_NAME_REGISTER } from '../../tools/constant';
+import navigationService from '../../navigation-service';
+import LocalizedString from "../../tools/localization";
 import Styles from "./style";
 
 const GetStarted = () => {
@@ -13,16 +14,16 @@ const GetStarted = () => {
             <View style={Styles.bgTransparent}>
                 <View>
                     <Image source={IlLogo} style={Styles.image} />
-                    <Text style={Styles.title}>Konsultasi dengan dokter jadi lebih mudah & fleksibel</Text>
+                    <Text style={Styles.title}>{LocalizedString.getStartedScreen.description}</Text>
                 </View>
                 <View>
                     <CustomButton
-                        title='Get Started'
+                        title={LocalizedString.getStartedScreen.buttonCaptionRegister}
                         onPressed={() => navigationService.navigate(NAV_NAME_REGISTER)}
                     />
-                    <View style={{ height: 16 }} />
+                    <Gap height={16} />
                     <CustomButton
-                        title='Sign In'
+                        title={LocalizedString.getStartedScreen.buttonCaptionLogin}
                         type='secondary'
                         onPressed={() => navigationService.navigate(NAV_NAME_LOGIN)}
                     />
