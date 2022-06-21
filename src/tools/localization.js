@@ -89,12 +89,10 @@ const LocalizedString = new LocalizedStrings({
             buttonCaptionRegister: 'Get Started',
             buttonCaptionLogin: 'Sign In',
         },
-        pinVerificationScreen: {
-            title: 'PIN Verification',
-            subTitle: 'Please enter PIN code we just sent to your email',
-            labelExpiration: 'Your PIN will expire in',
-            msgCancelConfirmation: 'Are you sure you want to cancel this process?',
-            errMsgPinMustBeSixDigits: 'The PIN must be six digits',
+        uploadPhotoScreen: {
+            title: 'Upload Photo',
+            buttonCaptionContinue: 'Upload and Continue',
+            buttonCaptionSkip: 'Skip for this',
         },
         resetPasswordScreen: {
             title: 'Reset Password',
@@ -173,13 +171,6 @@ const LocalizedString = new LocalizedStrings({
             labelRegister: 'Belum punya akun?',
             errEmptyUsernamePassword: 'Email dan Sandi tidak boleh kosong',
         },
-        emailSubmissionScreen: {
-            errMsgEmailCannotBeEmpty: 'Alamat email tidak boleh kosong',
-        },
-        forgetPasswordScreen: {
-            title: 'Lupa Sandi',
-            description: 'Tulis email Anda di sini. Kami akan mengirim PIN ke email Anda yang bisa digunakan untuk mengembalikan password Anda',
-        },
         registerEmailScreen: {
             title: 'Pendaftaran',
             description: 'Tulis email Anda di sini. Kami akan mengirim PIN ke email Anda yang bisa digunakan untuk melanjutkan proses registrasi',
@@ -194,6 +185,11 @@ const LocalizedString = new LocalizedStrings({
             description: 'Konsultasi dengan dokter jadi lebih mudah & fleksibel',
             buttonCaptionRegister: 'Memulai',
             buttonCaptionLogin: 'Masuk',
+        },
+        uploadPhotoScreen: {
+            title: 'Unggah Foto',
+            buttonCaptionContinue: 'Unggah dan Lanjut',
+            buttonCaptionSkip: 'Lewati',
         },
         resetPasswordScreen: {
             title: 'Buat Password',

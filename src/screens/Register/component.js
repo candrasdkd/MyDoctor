@@ -1,22 +1,23 @@
 import React from 'react'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
-import { View } from 'react-native'
+import { SafeAreaView, View } from 'react-native'
 import { CustomTextInput, CustomButton, Gap, Header } from '../../components';
-import { NAV_NAME_HOME, } from '../../tools/constant';
+import { NAV_NAME_UPLOAD_PHOTO, } from '../../tools/constant';
 import navigationService from '../../navigation-service';
 import LocalizedString from "../../tools/localization";
 import Styles from "./style";
 
 const RegisterScreen = () => {
     return (
-        <KeyboardAwareScrollView style={Styles.page}>
+        <SafeAreaView style={Styles.page}>
             <Header
                 title={LocalizedString.registerEmailScreen.title}
                 showIcon={true}
                 nameIcon={'backArrow'}
                 onPressed={() => navigationService.back()}
             />
-            <View style={{ padding: 40, paddingTop: 0 }}>
+            <KeyboardAwareScrollView style={{ padding: 40, paddingTop: 0 }}>
+                <Gap height={24} />
                 <CustomTextInput label={LocalizedString.registerEmailScreen.labelFullName} />
                 <Gap height={24} />
                 <CustomTextInput label={LocalizedString.registerEmailScreen.labelJobTitle} />
@@ -29,13 +30,10 @@ const RegisterScreen = () => {
                 <Gap height={40} />
                 <CustomButton
                     title={LocalizedString.registerEmailScreen.buttonCaptionRegister}
-                    onPressed={() => navigationService.reset({
-                        index: 0,
-                        routes: [{ name: NAV_NAME_HOME }],
-                    })}
+                    onPressed={() => navigationService.navigate(NAV_NAME_UPLOAD_PHOTO)}
                 />
-            </View>
-        </KeyboardAwareScrollView>
+            </KeyboardAwareScrollView>
+        </SafeAreaView>
     )
 }
 

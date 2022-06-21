@@ -1,6 +1,7 @@
 export const COLOR_WHITE = '#FFFFFF';
 export const COLOR_BLACK = '#000000';
-export const COLOR_DISABLED = '#A4A4A4';
+export const COLOR_REGULER_BLACK = '#222831'
+export const COLOR_DISABLED = '#979797';
 export const COLOR_TRANSPARENT_DARK = 'rgba(0, 0, 0, 0.3)';
 export const COLOR_HORIZONTAL_LINE = '#E5E5E5';
 export const COLOR_MAIN = '#0B3277'
@@ -25,4 +26,5 @@ export const NAV_NAME_SPLASH = 'NAV_NAME_SPLASH';
 export const NAV_NAME_GET_STARTED = 'NAV_NAME_GET_STARTED';
 export const NAV_NAME_LOGIN = 'NAV_NAME_LOGIN';
 export const NAV_NAME_REGISTER = 'NAV_NAME_REGISTER';
+export const NAV_NAME_UPLOAD_PHOTO = 'NAV_NAME_UPLOAD_PHOTO';
 export const NAV_NAME_HOME = 'NAV_NAME_HOME';

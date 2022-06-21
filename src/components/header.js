@@ -33,7 +33,6 @@ export default CustomHeader
 const styles = StyleSheet.create({
     container: {
         paddingHorizontal: 16,
-        paddingVertical: 30,
         backgroundColor: COLOR_WHITE,
         flexDirection: 'row',
         alignItems: 'center',
