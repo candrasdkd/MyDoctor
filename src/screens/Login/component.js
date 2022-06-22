@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, Image, StatusBar, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { CustomTextInput, CustomButton, CustomTextLink, Gap } from '../../components';
-import { NAV_NAME_HOME, NAV_NAME_REGISTER } from '../../tools/constant';
+import { NAV_NAME_HOME, NAV_NAME_REGISTER, NAV_NAME_TAB } from '../../tools/constant';
 import { IlLogo } from "../../assets";
 import navigationService from '../../navigation-service';
 import LocalizedString from "../../tools/localization";
@@ -27,10 +27,7 @@ const LoginScreen = () => {
                 <Gap height={40} />
                 <CustomButton
                     title={LocalizedString.loginScreen.buttonCaptionLogin}
-                    onPressed={() => navigationService.reset({
-                        index: 0,
-                        routes: [{ name: NAV_NAME_HOME }],
-                    })}
+                    onPressed={() => navigationService.replace(NAV_NAME_TAB)}
                 />
                 <Gap height={30} />
                 <CustomTextLink

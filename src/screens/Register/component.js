@@ -1,6 +1,6 @@
 import React from 'react'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
-import { SafeAreaView, View } from 'react-native'
+import { SafeAreaView } from 'react-native'
 import { CustomTextInput, CustomButton, Gap, Header } from '../../components';
 import { NAV_NAME_UPLOAD_PHOTO, } from '../../tools/constant';
 import navigationService from '../../navigation-service';

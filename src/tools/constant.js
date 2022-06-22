@@ -1,3 +1,7 @@
+export const API_GET_NEWS = 'https://newsapi.org/v2/everything?q=health&pageSize=4&apiKey=4ccf67f6df50452d9f27e1a8d14b32c1'
+
+export const REST_METHOD_GET = 'GET'
+
 export const COLOR_WHITE = '#FFFFFF';
 export const COLOR_BLACK = '#000000';
 export const COLOR_REGULER_BLACK = '#222831'
@@ -5,6 +9,7 @@ export const COLOR_DISABLED = '#979797';
 export const COLOR_TRANSPARENT_DARK = 'rgba(0, 0, 0, 0.3)';
 export const COLOR_HORIZONTAL_LINE = '#E5E5E5';
 export const COLOR_MAIN = '#0B3277'
+// export const COLOR_MAIN
 
 export const FONT_NUNITO_REGULAR = 'Nunito-Regular';
 export const FONT_NUNITO_BOLD = 'Nunito-Bold';
@@ -27,4 +32,11 @@ export const NAV_NAME_GET_STARTED = 'NAV_NAME_GET_STARTED';
 export const NAV_NAME_LOGIN = 'NAV_NAME_LOGIN';
 export const NAV_NAME_REGISTER = 'NAV_NAME_REGISTER';
 export const NAV_NAME_UPLOAD_PHOTO = 'NAV_NAME_UPLOAD_PHOTO';
+export const NAV_NAME_TAB = 'NAV_NAME_TAB';
 export const NAV_NAME_HOME = 'NAV_NAME_HOME';
+export const NAV_NAME_MESSAGES = 'NAV_NAME_MESSAGES';
+export const NAV_NAME_HOSPITALS = 'NAV_NAME_HOSPITALS';
+export const NAV_NAME_PROFILE = 'NAV_NAME_PROFILE';
+export const NAV_NAME_WEBVIEW = 'NAV_NAME_WEBVIEW';
+export const NAV_NAME_DETAIL_CHAT = 'NAV_NAME_DETAIL_CHAT';
+export const NAV_NAME_LIST_DOCTORS = 'NAV_NAME_LIST_DOCTORS';

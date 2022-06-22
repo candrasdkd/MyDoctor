@@ -67,13 +67,6 @@ const LocalizedString = new LocalizedStrings({
             labelRegister: 'Don\'t have an account yet?',
             errEmptyUsernamePassword: 'Email and password cannot be empty',
         },
-        emailSubmissionScreen: {
-            errMsgEmailCannotBeEmpty: 'The email address cannot be empty',
-        },
-        forgetPasswordScreen: {
-            title: 'Forget Password',
-            description: 'Write your email here. We will send a PIN to your email for resetting your password',
-        },
         registerEmailScreen: {
             title: 'Registration',
             description: 'Write your email here. We will send a PIN to your email to continue the registration process',
