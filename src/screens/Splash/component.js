@@ -15,7 +15,7 @@ const SplashScreen = () => {
     )
 
     return (
-        <BaseScreen>
+        <BaseScreen containerStyle={{paddingVertical:0}}>
              <StatusBar translucent backgroundColor="transparent" barStyle="dark-content" />
             <View style={Styles.containerLottie}>
                 <LottieView
