@@ -7,13 +7,13 @@ import {
     SplashScreen, GetStartedScreen, LoginScreen, RegisterScreen, 
     UploadPhotoScreen, WebviewScreen, DetailChatScreen, ListDoctorsScreen,
 } from "../screens";
-import TabScreen from "../menuNavigation/bottomTab";
+import TabScreen from "./BottomTab";
 import { 
     NAV_NAME_SPLASH, NAV_NAME_GET_STARTED, NAV_NAME_LOGIN, NAV_NAME_REGISTER,
     NAV_NAME_UPLOAD_PHOTO, NAV_NAME_TAB, NAV_NAME_WEBVIEW, NAV_NAME_DETAIL_CHAT,
     NAV_NAME_LIST_DOCTORS,
 } from "../tools/constant";
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, } from '@react-navigation/native';
 import NavigationService from '../navigation-service';
 
 
@@ -21,7 +21,7 @@ const Stack = createStackNavigator();
 
 function MainNavigation() {
     return (
-        <NavigationContainer ref={NavigationService.navigationRef}>
+        <NavigationContainer ref={NavigationService.navigationRef} initialRouteName={NAV_NAME_SPLASH}>
             <Stack.Navigator initialRouteName={NAV_NAME_SPLASH}>
                 <Stack.Screen
                     name={NAV_NAME_SPLASH}

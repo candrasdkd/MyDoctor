@@ -1,2 +1,2 @@
-import GetStarted from "./component";
+import GetStarted from "./Component";
 export default GetStarted;

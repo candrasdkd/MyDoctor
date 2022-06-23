@@ -1,2 +1,2 @@
-import Profile from "./component";
+import Profile from "./Component";
 export default Profile;

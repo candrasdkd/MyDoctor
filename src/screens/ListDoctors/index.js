@@ -1,2 +1,2 @@
-import ListDoctors from "./component";
+import ListDoctors from "./Component";
 export default ListDoctors;

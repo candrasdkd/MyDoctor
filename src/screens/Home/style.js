@@ -22,45 +22,6 @@ export default StyleSheet.create({
         marginHorizontal: 25,
         maxWidth: 250
     },
-    cardWrapper: {
-        height: height / 5,
-        width: width / 2.5,
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'row',
-        marginBottom: 15
-    },
-    cardButton: {
-        backgroundColor: COLOR_MAIN,
-        height: '90%',
-        width: '90%',
-        borderRadius: 20,
-        shadowColor: COLOR_BLACK,
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 8,
-        padding: 15,
-        alignItems: 'center',
-        justifyContent: 'space-between'
-    },
-    textCardWrapper: {
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    firstTitle: {
-        fontSize: 14,
-        color: COLOR_WHITE,
-        fontFamily: FONT_NUNITO_SEMI_BOLD
-    },
-    secondTitle: {
-        fontSize: 16,
-        color: COLOR_WHITE,
-        fontFamily: FONT_NUNITO_SEMI_BOLD
-    },
     categoryText: {
         fontSize: 16,
         marginHorizontal: 25,
@@ -71,13 +32,15 @@ export default StyleSheet.create({
         marginVertical: 20,
         marginHorizontal: 25,
     },
-    fullName: {
+    firstText: {
         fontSize: 16,
         color: COLOR_BLACK,
         fontFamily: FONT_NUNITO_REGULAR,
-
+        maxWidth: '80%', 
+        textAlign: 'justify', 
+        lineHeight: 18
     },
-    profession: {
+    secondText: {
         fontSize: 14,
         color: COLOR_DISABLED,
         fontFamily: FONT_NUNITO_REGULAR

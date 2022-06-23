@@ -1,2 +1,2 @@
-import Messages from "./component";
+import Messages from "./Component";
 export default Messages;

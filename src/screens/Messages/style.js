@@ -1,7 +1,6 @@
 import { StyleSheet } from "react-native";
-import { COLOR_WHITE, COLOR_TRANSPARENT_DARK, COLOR_BLACK } from "../../tools/constant";
-import { getScreenDimension, ios } from "../../tools/helper";
-const { height, width } = getScreenDimension();
+import { COLOR_WHITE } from "../../tools/constant";
+import { ios } from "../../tools/helper";
 
 export default StyleSheet.create({
     page: {
@@ -9,22 +8,4 @@ export default StyleSheet.create({
         flex: 1,
         paddingVertical: ios ? 20 : 30,
     },
-    bgTransparent: {
-        backgroundColor: COLOR_TRANSPARENT_DARK,
-        padding:40,
-        justifyContent: 'space-between',
-        height,
-        width
-    },
-    image: {
-        width: width / 3.5,
-        height: width / 3.5,
-    },
-    title: {
-        fontSize: 28,
-        fontFamily: 'Nunito-Bold',
-        color: COLOR_WHITE,
-        marginTop: 91
-    }
-
 });

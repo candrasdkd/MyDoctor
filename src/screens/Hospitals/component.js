@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, SafeAreaView } from 'react-native'
 import React from 'react'
 import NavigationService from "../../navigation-service";
-import Styles from "./style";
+import Styles from "./Style";
 
 const HospitalsScreen = () => {
     return (

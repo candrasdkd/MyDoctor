@@ -1,29 +1,23 @@
 import React from 'react'
 import { Text, StyleSheet, View, TouchableOpacity } from 'react-native'
 import { COLOR_BLACK, COLOR_WHITE } from '../tools/constant'
-import { IconBack } from '../assets';
-import { android } from '../tools/helper';
+import MyIcon from './MyIcon';
 
-const CustomHeader = ({ showIcon, title, onPressed, width, height, colorIcon, nameIcon }) => {
-    const renderIcon = () => {
-        if (nameIcon === 'backArrow') {
-            return (
-                <IconBack
-                    width={width ? width : 24}
-                    height={height ? height : 24}
-                    fill={colorIcon ? colorIcon : COLOR_BLACK}
-                />
-            )
-        }
-    }
-
+const CustomHeader = ({
+    containerStyle, showIcon, title, onPressed, typeIcon, labelIcon, colorIcon,
+    sizeIcon, ...props
+}) => {
     return (
-        <View style={styles.container}>
-            {showIcon &&
-                <TouchableOpacity onPress={onPressed}>
-                    {renderIcon()}
-                </TouchableOpacity>
-            }
+        <View style={[styles.container, containerStyle]}>
+            <TouchableOpacity onPress={onPressed}>
+                <MyIcon
+                    type={typeIcon}
+                    name={labelIcon}
+                    color={colorIcon}
+                    size={sizeIcon}
+                    {...props}
+                />
+            </TouchableOpacity>
             <Text style={styles.title}>{title}</Text>
             <View style={{ width: 24 }} />
         </View>
@@ -33,7 +27,10 @@ export default CustomHeader
 
 const styles = StyleSheet.create({
     container: {
-        paddingHorizontal: 16,
+        // height:30,
+        paddingHorizontal: 30,
+        marginTop: 5,
+        marginBottom: 20,
         backgroundColor: COLOR_WHITE,
         flexDirection: 'row',
         alignItems: 'center',

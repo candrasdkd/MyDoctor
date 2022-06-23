@@ -1,13 +1,14 @@
-import { View, Text, TouchableOpacity, SafeAreaView, StatusBar } from 'react-native'
+import { TouchableOpacity, SafeAreaView, StatusBar } from 'react-native'
 import React from 'react'
 import NavigationService from "../../navigation-service";
 import WebView from 'react-native-webview';
-import Styles from "./style";
+import Styles from "./Style";
 import { android } from '../../tools/helper';
+import { BaseScreen } from '../../components';
 
 const WebviewScreen = ({ route }) => {
     return (
-        <SafeAreaView style={Styles.page}>
+        <BaseScreen>
             <StatusBar hidden />
             <WebView
                 originWhitelist={['*']}
@@ -20,7 +21,7 @@ const WebviewScreen = ({ route }) => {
                         'Mozilla/5.0 (Linux; Android 12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.99 Mobile Safari/537.36' :
                         'Mozilla/5.0 (iPhone; CPU iPhone OS 15_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/102.0.5005.87 Mobile/15E148 Safari/604.1'}
             />
-        </SafeAreaView>
+        </BaseScreen>
     )
 }
 

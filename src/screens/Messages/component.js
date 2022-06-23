@@ -1,47 +1,32 @@
-import { Alert, FlatList, Image, SafeAreaView, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import NavigationService from "../../navigation-service";
-import Styles from "./style";
-import { ios } from '../../tools/helper';
-import { Header, HorizontalLine } from "../../components";
-import { COLOR_BLACK, COLOR_DISABLED, COLOR_HORIZONTAL_LINE, COLOR_REGULER_BLACK, FONT_NUNITO_BOLD, FONT_NUNITO_REGULAR, FONT_NUNITO_SEMI_BOLD } from '../../tools/constant';
+import Styles from "./Style";
+import { View } from 'react-native'
+import { BaseScreen, ContactCard, Header, HorizontalLine, MyFlatlist } from "../../components";
+import { COLOR_HORIZONTAL_LINE } from '../../tools/constant';
 
 const MessagesScreen = () => {
     return (
-        <SafeAreaView style={Styles.page}>
+        <BaseScreen>
             <Header
-                title={'MESSAGES'}
+                title={'Messages'}
             />
-            <FlatList
+            <MyFlatlist
                 data={Chat}
                 keyExtractor={item => item.id.toString()}
                 renderItem={({ item }) =>
-                    <View style={{ flexDirection: 'column' }}>
-                        <TouchableOpacity
-                            style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}
-                            onPress={() => Alert.alert('GO TO DETAIL CHAT')}
-                        >
-                            <Image
-                                source={{ uri: item.image }}
-                                resizeMode='cover'
-                                style={{
-                                    height: 50, width: 50, borderRadius: 50 / 2, marginRight: 14,
-                                }}
-                            />
-                            <View style={{ flex: 1 }}>
-                                <Text style={{ fontSize: 16, fontWeight: '400', fontFamily: FONT_NUNITO_SEMI_BOLD, color: COLOR_BLACK }}>{item.fullName}</Text>
-                                <Text style={{ fontSize: 14, color: COLOR_DISABLED, fontFamily: FONT_NUNITO_SEMI_BOLD, maxWidth: '100%' }} numberOfLines={1} ellipsizeMode={'tail'}>{item.text}</Text>
-                            </View>
-
-                        </TouchableOpacity>
+                    <View style={Styles.cardWrapper}>
+                        <ContactCard
+                            image={item.image}
+                            firstText={item.fullName}
+                            secondText={item.text}
+                        />
                         <HorizontalLine borderColor={COLOR_HORIZONTAL_LINE} width="100%" />
                     </View>
                 }
-                contentContainerStyle={{ paddingLeft: 15, paddingRight: 20, marginTop:15 }}
                 showsHorizontalScrollIndicator={false}
+                contentContainerStyle={{ paddingBottom: 50 }}
             />
-        </SafeAreaView>
-
+        </BaseScreen>
     )
 }
 
@@ -70,6 +55,7 @@ const Chat = [
         text: 'Rendered at the top of all the items. Can be a React Component (e.g. SomeComponent), or a React element (e.g. <SomeComponent />).',
         image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
     },
+
 ]
 
 export default MessagesScreen

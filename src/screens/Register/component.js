@@ -1,19 +1,21 @@
 import React from 'react'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { SafeAreaView } from 'react-native'
-import { CustomTextInput, CustomButton, Gap, Header } from '../../components';
+import { CustomTextInput, CustomButton, Gap, Header, BaseScreen } from '../../components';
 import { NAV_NAME_UPLOAD_PHOTO, } from '../../tools/constant';
 import navigationService from '../../navigation-service';
 import LocalizedString from "../../tools/localization";
-import Styles from "./style";
+import Styles from "./Style";
+import { IconName } from '../../tools/helper';
 
 const RegisterScreen = () => {
     return (
-        <SafeAreaView style={Styles.page}>
+        <BaseScreen style={Styles.page}>
             <Header
                 title={LocalizedString.registerEmailScreen.title}
-                showIcon={true}
-                nameIcon={'backArrow'}
+                typeIcon={IconName.MaterialCommunityIcons}
+                labelIcon={'arrow-left-circle-outline'}
+                sizeIcon={35}
                 onPressed={() => navigationService.back()}
             />
             <KeyboardAwareScrollView style={{ padding: 40, paddingTop: 0 }}>
@@ -33,7 +35,7 @@ const RegisterScreen = () => {
                     onPressed={() => navigationService.navigate(NAV_NAME_UPLOAD_PHOTO)}
                 />
             </KeyboardAwareScrollView>
-        </SafeAreaView>
+        </BaseScreen>
     )
 }
 

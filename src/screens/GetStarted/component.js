@@ -5,7 +5,7 @@ import { CustomButton, Gap } from '../../components';
 import { NAV_NAME_LOGIN, NAV_NAME_REGISTER } from '../../tools/constant';
 import navigationService from '../../navigation-service';
 import LocalizedString from "../../tools/localization";
-import Styles from "./style";
+import Styles from "./Style";
 
 const GetStarted = () => {
     return (

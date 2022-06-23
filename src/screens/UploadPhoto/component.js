@@ -1,20 +1,21 @@
 import React from 'react'
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
-import { Image, SafeAreaView, View, Text, TouchableOpacity } from 'react-native'
-import { CustomTextInput, CustomButton, Gap, Header, CustomTextLink } from '../../components';
-import { COLOR_BLACK, NAV_NAME_LOGIN, NAV_NAME_UPLOAD_PHOTO, } from '../../tools/constant';
+import { Image, View, Text, TouchableOpacity } from 'react-native'
+import { CustomButton, Gap, Header, CustomTextLink, BaseScreen } from '../../components';
+import { NAV_NAME_LOGIN, } from '../../tools/constant';
 import { IlNullAvatar, IconAdd } from "../../assets";
 import navigationService from '../../navigation-service';
 import LocalizedString from "../../tools/localization";
-import Styles from "./style";
+import Styles from "./Style";
+import { IconName } from '../../tools/helper';
 
 const UploadPhoto = () => {
     return (
-        <SafeAreaView style={Styles.page}>
+        <BaseScreen>
             <Header
                 title={LocalizedString.uploadPhotoScreen.title}
-                showIcon={true}
-                nameIcon={'backArrow'}
+                typeIcon={IconName.MaterialCommunityIcons}
+                labelIcon={'arrow-left-circle-outline'}
+                sizeIcon={35}
                 onPressed={() => navigationService.back()}
             />
             <View style={Styles.content}>
@@ -43,7 +44,7 @@ const UploadPhoto = () => {
                     />
                 </View>
             </View>
-        </SafeAreaView>
+        </BaseScreen>
     )
 }
 

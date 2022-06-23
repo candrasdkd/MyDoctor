@@ -1,2 +1,2 @@
-import DetailChat from "./component";
+import DetailChat from "./Component";
 export default DetailChat;

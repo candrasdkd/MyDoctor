@@ -1,7 +1,6 @@
 import { StyleSheet } from "react-native";
-import { COLOR_WHITE, COLOR_TRANSPARENT_DARK, COLOR_BLACK } from "../../tools/constant";
-import { getScreenDimension, ios } from "../../tools/helper";
-const { height, width } = getScreenDimension();
+import { COLOR_WHITE } from "../../tools/constant";
+import { ios } from "../../tools/helper";
 
 export default StyleSheet.create({
     page: {
@@ -9,4 +8,7 @@ export default StyleSheet.create({
         flex: 1,
         paddingTop: ios ? 0 : 25,
     },
+    cardWrapper: {
+        marginHorizontal: 20
+    }
 });

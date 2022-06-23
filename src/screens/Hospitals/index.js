@@ -1,2 +1,2 @@
-import Hospitals from "./component";
+import Hospitals from "./Component";
 export default Hospitals;

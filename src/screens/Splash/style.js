@@ -4,11 +4,6 @@ import { getScreenDimension, ios } from "../../tools/helper";
 const { height, width } = getScreenDimension();
 
 export default StyleSheet.create({
-    container: {
-        backgroundColor: COLOR_WHITE,
-        flex: 1,
-        alignItems: 'center'
-    },
     containerLottie: {
         width,
         height: ios ? height - 150 : height,

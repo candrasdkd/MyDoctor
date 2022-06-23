@@ -1,7 +1,7 @@
 import { Alert, FlatList, Image, SafeAreaView, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import NavigationService from "../../navigation-service";
-import Styles from "./style";
+import Styles from "./Style";
 import { ios } from '../../tools/helper';
 import { Header, HorizontalLine } from "../../components";
 import { COLOR_BLACK, COLOR_DISABLED, COLOR_HORIZONTAL_LINE, COLOR_REGULER_BLACK, FONT_NUNITO_BOLD, FONT_NUNITO_REGULAR, FONT_NUNITO_SEMI_BOLD } from '../../tools/constant';

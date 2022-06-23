@@ -1,2 +1,2 @@
-import Webview from "./component";
+import Webview from "./Component";
 export default Webview;

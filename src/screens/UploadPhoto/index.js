@@ -1,2 +1,2 @@
-import UploadPhoto from "./component";
+import UploadPhoto from "./Component";
 export default UploadPhoto;
