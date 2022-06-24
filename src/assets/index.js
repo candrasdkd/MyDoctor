@@ -8,6 +8,7 @@ import IlTeeth from "./icons/teeth.svg";
 import IlEar from "./icons/ear.svg";
 import IlEye from "./icons/eye.svg";
 import IlDoctor from "./images/doctor.jpg";
+import IlLoading from "./lotties/loading.json";
 
 export {
     IlLogo,
@@ -19,5 +20,6 @@ export {
     IlTeeth,
     IlEar,
     IlEye,
-    IlDoctor
+    IlDoctor,
+    IlLoading
 };
