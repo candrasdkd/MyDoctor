@@ -1,5 +1,5 @@
-import { View, Text, TouchableOpacity, Image, ActivityIndicator } from 'react-native'
-import React, { Fragment, useCallback, useEffect, useState } from 'react'
+import { View, Text, TouchableOpacity, Image } from 'react-native'
+import React, { useEffect, useState } from 'react'
 import { BaseScreen, HomeCard, HomeProfile, MyFlatlist, RatingCard } from "../../components";
 import Styles from "./Style";
 import { ios } from "../../tools/helper";
@@ -7,17 +7,11 @@ import { API_GET_NEWS, NAV_NAME_LIST_DOCTORS, NAV_NAME_WEBVIEW, REST_METHOD_GET 
 import navigationService from '../../navigation-service';
 import { faker } from "@faker-js/faker";
 import LottieView from 'lottie-react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
 const HomeScreen = () => {
     const [users, setUsers] = useState([])
     const [dataNews, setDataNews] = useState([])
     const [loading, setLoading] = useState(true)
-    const sendGetNews = async () => {
-
-
-    };
-
     const createRandomData = async () => {
         let USERS = []
         const url = API_GET_NEWS
@@ -30,7 +24,7 @@ const HomeScreen = () => {
                 jobTitle: faker.name.jobTitle(),
                 rating: faker.datatype.number({
                     max: 5,
-                    min: 1
+                    min: 3
                 })
             })
         }
@@ -40,9 +34,9 @@ const HomeScreen = () => {
         setDataNews(responseJSON)
         setTimeout(() => {
             setLoading(false)
-        }, 10000);
-
+        }, 3000);
     }
+
     useEffect(() => {
         createRandomData()
     }, [])
@@ -139,7 +133,7 @@ const Data = [
         id: 2,
         firstTitle: 'Dokter',
         secondTitle: 'Gigi',
-        icon: 'https://cdn-icons.flaticon.com/png/512/2779/premium/2779588.png?token=exp=1655975751~hmac=cd007e05e0a708f983f3c5b8bdb0f07a'
+        icon: 'https://img.icons8.com/external-obivous-color-kerismaker/344/external-clean-teeth-dental-color-obivous-color-kerismaker.png'
     },
     {
         id: 3,

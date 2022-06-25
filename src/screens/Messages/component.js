@@ -1,31 +1,58 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Styles from "./Style";
 import { View } from 'react-native'
-import { BaseScreen, ContactCard, Header, HorizontalLine, MyFlatlist } from "../../components";
+import { BaseScreen, ContactCard, CustomLoading, Header, HorizontalLine, MyFlatlist } from "../../components";
 import { COLOR_HORIZONTAL_LINE } from '../../tools/constant';
+import LottieView from 'lottie-react-native';
+import { faker } from "@faker-js/faker";
 
 const MessagesScreen = () => {
+    const [users, setUsers] = useState([])
+    const [loading, setLoading] = useState(true)
+    const createRandomData = async () => {
+        let USERS = []
+        for (let index = 0; index < 20; index++) {
+            USERS.push({
+                key: faker.datatype.uuid(),
+                image: faker.image.avatar(),
+                name: faker.name.findName(),
+                text: faker.random.words(10),
+
+            })
+        }
+        setUsers(USERS)
+        setTimeout(() => {
+            setLoading(false)
+        }, 3000);
+    }
+    useEffect(() => {
+        createRandomData()
+    }, [])
     return (
         <BaseScreen>
             <Header
                 title={'Messages'}
             />
-            <MyFlatlist
-                data={Chat}
-                keyExtractor={item => item.id.toString()}
-                renderItem={({ item }) =>
-                    <View style={Styles.cardWrapper}>
-                        <ContactCard
-                            image={item.image}
-                            firstText={item.fullName}
-                            secondText={item.text}
-                        />
-                        <HorizontalLine borderColor={COLOR_HORIZONTAL_LINE} width="100%" />
-                    </View>
-                }
-                showsHorizontalScrollIndicator={false}
-                contentContainerStyle={{ paddingBottom: 50 }}
-            />
+            {loading ?
+                <CustomLoading /> :
+                <MyFlatlist
+                    data={users}
+                    keyExtractor={item => item.key.toString()}
+                    renderItem={({ item }) =>
+                        <View style={Styles.cardWrapper}>
+                            <ContactCard
+                                image={item.image}
+                                firstText={item.name}
+                                secondText={item.text}
+                            />
+                            <HorizontalLine borderColor={COLOR_HORIZONTAL_LINE} width="100%" />
+                        </View>
+                    }
+                    showsHorizontalScrollIndicator={false}
+                    contentContainerStyle={{ paddingBottom: 50 }}
+                />
+            }
+
         </BaseScreen>
     )
 }

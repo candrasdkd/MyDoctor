@@ -11,3 +11,4 @@ export { default as MyFlatlist } from './MyFlatlist';
 export { default as RatingCard } from './RatingCard';
 export { default as ContactCard } from './ContactCard';
 export { default as MyIcon } from './MyIcon';
+export { default as CustomLoading } from './Loading'
